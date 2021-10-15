@@ -15,7 +15,7 @@ public class DataBaseConfig {
     public Connection getConnection() throws ClassNotFoundException, SQLException, IOException {
         logger.info("Create DB connection");
         Properties props = new Properties();
-        FileInputStream fis = new FileInputStream("src/test/java/com/parkit/parkingsystem/integration/config/DataBaseProperties.properties");
+        FileInputStream fis = new FileInputStream("src/main/resources/DataBaseProperties.properties");
         props.load(fis);
         String url = props.getProperty("jdbc.url");
         String user = props.getProperty("jdbc.username");
